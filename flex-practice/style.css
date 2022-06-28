@@ -1,0 +1,261 @@
+body {
+    display: grid;
+    grid-template-rows: 6em 3fr 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "nav nav"
+    "header header"
+    "definition definition"
+    "how-to how-to"
+    "links links";
+    background-color: rgb(121, 87, 153);
+}
+
+.nav-container {
+    grid-area: nav;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 2fr .5fr;
+    background:rgb(37, 34, 34);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    font-family: 'Goldman', cursive;
+    font-size: 20px;
+    
+}
+
+
+
+
+
+.navbar-logo {
+    font-family: 'Goldman', cursive;
+    color: rgb(214, 152, 214);
+    justify-self: start;
+    font-size: 30px;
+}
+
+.hero-header {
+    grid-area: header;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAtIf0qKmcfkPX-lAXJnMCsjJRhB9MEBgh7A&usqp=CAU);
+    display: grid;
+    text-align: center;
+    grid-template-rows: 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.hero-title {
+    min-width: none;
+    grid-area; hero;
+    background-color: aquamarine;
+    font-size: 150px;
+    font-weight: bold;
+    font-family: 'Titan One', cursive;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 0em .1em 0.1em;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    background-color: rgb(51, 163, 207);
+    font-family: 'Titan One', cursive;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: 0;
+    padding: 5px;
+    box-shadow: 0em .2em 0.2em;
+    border-radius: 6px;
+}
+
+.kendama-definition {
+    grid-area: definition;
+    font-family: 'Goldman', cursive;
+    font-weight: 500;
+    font-size: large;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+a:hover {
+    font-family: 'Titan One', cursive;
+    text-decoration: none;
+    color:rgb(201, 111, 51);
+    transition: all 0.2s ease-in-out;
+    
+}
+
+ul {
+    list-style: none;
+    line-height: 30px;
+    color: white;
+}
+
+.definition-title {
+    background-color: aquamarine;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0em .2em 0.2em;
+}
+
+.how-to {
+    font-family: 'Goldman', cursive;
+    grid-area: how-to;
+    background-color: rgb(37, 34, 34);
+    color: white;
+    line-height: 30px;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 6px;
+    padding: 5px 50px;
+    
+}
+
+.howto-title {
+    text-align: center;
+}
+
+.links {
+
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: links;
+    color: black;
+    border-radius: 6px;
+    font-family: 'Titan One', cursive;
+}
+
+.menu-toggle .bar {
+    
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: white;
+
+}
+
+/* @media screen (max-width: 768px) {
+    
+} */
+
+.nav-container {
+    position: relative;
+    align-content: center;
+
+}
+
+.menu-toggle {
+    display: block;
+    align-self: center;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: auto;
+    background:rgb(201, 111, 51);
+    margin: 0;
+    width: 100%;
+    border-radius: 6px;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.navbar-logo {
+    margin-left: 20px;
+    align-self: center;
+}
+
+.nav-menu.active {
+    background:rgb(201, 111, 51);
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.nav-links {
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    width: 100%;
+    display: table;
+    transition: all 0.4s ease-out;
+}
+
+.nav-links:hover {
+    background-color: olive;
+    transition: all 0.4 ease-out;
+}
+
+.navbar {
+    width: 100%
+}
+
+.nav-links-btn {
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    color: white;
+    transition: all 0.4s ease-out;
+    
+}
+
+.nav-links-btn:hover {
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    color: white;
+    transition: all 0.4s ease-out;
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+    
+}
+
+.menu-toggle .bar {
+    display: block;
+    cursor: pointer;
+    
+}
+
+.menu-toggle:hover {
+    cursor: pointer;
+}
+
+#mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
